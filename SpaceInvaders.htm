@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\SpaceInvaders.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\SpaceInvaders.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu May 05 15:28:32 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun May 22 15:45:15 2016
 <BR><P>
 <H3>Maximum Stack Usage =         40 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -20,7 +20,7 @@ Functions with no stack information
  <LI><a href="#[ce]">WaitForInterrupt</a>
  <LI><a href="#[91]">__user_initial_stackheap</a>
  <LI><a href="#[a3]">Random_Init</a>
- <LI><a href="#[a6]">Random32</a>
+ <LI><a href="#[a7]">Random32</a>
  <LI><a href="#[cf]">Random</a>
 </UL>
 </UL>
@@ -133,7 +133,7 @@ Function Pointers
  <LI><a href="#[21]">Timer0B_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[22]">Timer1A_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[23]">Timer1B_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
- <LI><a href="#[24]">Timer2A_Handler</a> from spaceinvaders.o(i.Timer2A_Handler) referenced from startup.o(RESET)
+ <LI><a href="#[24]">Timer2A_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[25]">Timer2B_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[30]">Timer3A_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[31]">Timer3B_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
@@ -488,6 +488,9 @@ Global Symbols
 <P><STRONG><a name="[23]"></a>Timer1B_Handler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup.o(RESET))
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
+<P><STRONG><a name="[24]"></a>Timer2A_Handler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup.o(RESET))
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
 <P><STRONG><a name="[25]"></a>Timer2B_Handler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup.o(RESET))
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
@@ -724,7 +727,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a6]"></a>Random32</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, random.o(.text))
+<P><STRONG><a name="[a7]"></a>Random32</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, random.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -780,7 +783,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TExaS_Init
 </UL>
 
-<P><STRONG><a name="[a8]"></a>Delay100ms</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, spaceinvaders.o(i.Delay100ms))
+<P><STRONG><a name="[a6]"></a>Delay100ms</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, spaceinvaders.o(i.Delay100ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Delay100ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -851,7 +854,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a7]"></a>Nokia5110_PrintBMP</STRONG> (Thumb, 420 bytes, Stack size 36 bytes, nokia5110.o(i.Nokia5110_PrintBMP))
+<P><STRONG><a name="[a8]"></a>Nokia5110_PrintBMP</STRONG> (Thumb, 420 bytes, Stack size 36 bytes, nokia5110.o(i.Nokia5110_PrintBMP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Nokia5110_PrintBMP
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -871,8 +874,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TExaS_Init
 </UL>
 
-<P><STRONG><a name="[a4]"></a>PortF_Init</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, spaceinvaders.o(i.PortF_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PortF_Init
+<P><STRONG><a name="[a4]"></a>PortE_Init</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, spaceinvaders.o(i.PortE_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PortE_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -897,9 +900,6 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[24]"></a>Timer2A_Handler</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, spaceinvaders.o(i.Timer2A_Handler))
-<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
-</UL>
 <P><STRONG><a name="[4f]"></a>Timer4A_Handler</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, texas.o(i.Timer4A_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
@@ -916,17 +916,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TExaS_Init
 </UL>
 
-<P><STRONG><a name="[8a]"></a>main</STRONG> (Thumb, 636 bytes, Stack size 0 bytes, spaceinvaders.o(i.main))
+<P><STRONG><a name="[8a]"></a>main</STRONG> (Thumb, 854 bytes, Stack size 0 bytes, spaceinvaders.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = main &rArr; Nokia5110_OutUDec &rArr; Nokia5110_OutString &rArr; Nokia5110_OutChar
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TExaS_Init
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortF_Init
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortE_Init
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random_Init
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_SetCursor
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_PrintBMP
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_PrintBMP
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_OutUDec
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_OutString
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_Init
